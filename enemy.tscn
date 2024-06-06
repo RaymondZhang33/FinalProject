@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://burep8auk3yhe"]
+
+[ext_resource type="Texture2D" uid="uid://sklajvhucbl" path="res://Sprites/pixilart-drawing (2).png" id="1_r7pme"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6vb6y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_r7pme")
+}],
+"loop": true,
+"name": &"atac",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3d3e"]
+size = Vector2(90, 79)
+
+[node name="Enemy" type="RigidBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1047, 304)
+scale = Vector2(1.98, 2.055)
+sprite_frames = SubResource("SpriteFrames_6vb6y")
+animation = &"atac"
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1051, 283)
+shape = SubResource("RectangleShape2D_r3d3e")
+metadata/_edit_group_ = true
