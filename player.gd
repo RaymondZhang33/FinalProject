@@ -1,7 +1,7 @@
 extends Area2D
 signal hit
 @export var speed = 500
-var screen_size 
+var screen_size
 
 func _ready():
 	screen_size = get_viewport_rect().size

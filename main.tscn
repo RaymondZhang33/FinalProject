@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1xbjg5i4k8gy"]
+[gd_scene load_steps=5 format=3 uid="uid://dwx4iq2a3ko7c"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1niew"]
-[ext_resource type="PackedScene" uid="uid://b2d7dmchvti1u" path="res://player.tscn" id="1_f7qmh"]
-[ext_resource type="PackedScene" uid="uid://burep8auk3yhe" path="res://enemy.tscn" id="2_swr8d"]
-[ext_resource type="PackedScene" uid="uid://s7bdxgj2e4ta" path="res://hud.tscn" id="4_836q1"]
+[ext_resource type="PackedScene" uid="uid://ct4t0wrxuoday" path="res://player.tscn" id="1_f7qmh"]
+[ext_resource type="PackedScene" uid="uid://dc3gb7m2jx1th" path="res://enemy.tscn" id="2_swr8d"]
+[ext_resource type="PackedScene" uid="uid://caw1vn5ubvqmv" path="res://hud.tscn" id="4_836q1"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_1niew")
@@ -22,14 +22,15 @@ color = Color(0.554762, 0.000222653, 0.554758, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="."]
 offset_left = 998.0
-offset_top = 233.0
+offset_top = 19.0
 offset_right = 1103.0
-offset_bottom = 343.0
+offset_bottom = 630.0
 color = Color(0.0980392, 0.980392, 0.984314, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_f7qmh")]
 
 [node name="Enemy" parent="." instance=ExtResource("2_swr8d")]
+position = Vector2(2, 2)
 gravity_scale = 0.0
 
 [node name="HUD" parent="." instance=ExtResource("4_836q1")]
