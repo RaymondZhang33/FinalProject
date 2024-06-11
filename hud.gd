@@ -1,9 +1,11 @@
 extends CanvasLayer
 var score = 0
-var time = 60
+var time = 10
 
 func scoreupdate():
+	score += 1
 	$Score.text = str(score)
+	
 func _on_button_pressed():
 	$Button.hide()
 	$Timer.start()
@@ -17,4 +19,4 @@ func _process(delta):
 
 
 func _on_timer_timeout():
-	$TimeStr.text = str(60)
+	$Timer.stop()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://caw1vn5ubvqmv"]
+[gd_scene load_steps=3 format=3 uid="uid://u0t01nsx1ywy"]
 
 [ext_resource type="Script" path="res://hud.gd" id="1_xlyqf"]
 [ext_resource type="Script" path="res://Button.gd" id="2_hu457"]
@@ -21,10 +21,10 @@ text = "Nothing is Normal"
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 85.0
-offset_top = 57.0
-offset_right = 120.0
-offset_bottom = 126.0
+offset_left = 81.0
+offset_top = 56.0
+offset_right = 116.0
+offset_bottom = 125.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 50
 text = "0"
@@ -38,7 +38,7 @@ theme_override_font_sizes/font_size = 50
 text = "Score:"
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 60.0
+wait_time = 10.0
 
 [node name="Button" type="Button" parent="."]
 offset_left = 447.0

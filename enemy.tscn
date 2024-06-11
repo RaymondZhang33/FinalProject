@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dc3gb7m2jx1th"]
+[gd_scene load_steps=5 format=3 uid="uid://bkcfr854v1g0u"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_o4v7w"]
 [ext_resource type="Texture2D" uid="uid://sklajvhucbl" path="res://Sprites/pixilart-drawing (2).png" id="1_r7pme"]
