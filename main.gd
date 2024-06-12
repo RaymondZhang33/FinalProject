@@ -1,6 +1,5 @@
 extends Node
 
-@export var mob_scene: PackedScene
 var score = 0
 var running = false
 var once_changed = false
