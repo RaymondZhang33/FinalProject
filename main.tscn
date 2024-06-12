@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbhhtkkoovmvx"]
+[gd_scene load_steps=5 format=3 uid="uid://c6fl8uwdeqj6k"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1niew"]
-[ext_resource type="PackedScene" uid="uid://c32j548m21j4a" path="res://player.tscn" id="1_f7qmh"]
-[ext_resource type="PackedScene" uid="uid://bkcfr854v1g0u" path="res://enemy.tscn" id="2_swr8d"]
-[ext_resource type="PackedScene" uid="uid://u0t01nsx1ywy" path="res://hud.tscn" id="4_836q1"]
+[ext_resource type="PackedScene" uid="uid://cxoeoieb1o7nk" path="res://player.tscn" id="1_f7qmh"]
+[ext_resource type="PackedScene" uid="uid://bpay4b7p2kycd" path="res://enemy.tscn" id="2_swr8d"]
+[ext_resource type="PackedScene" uid="uid://bf6w44n3pgjmv" path="res://hud.tscn" id="4_836q1"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_1niew")
@@ -28,12 +28,14 @@ offset_right = 1103.0
 offset_bottom = 630.0
 color = Color(0.0980392, 0.980392, 0.984314, 1)
 
-[node name="Player" parent="." instance=ExtResource("1_f7qmh")]
-
-[node name="Enemy" parent="." instance=ExtResource("2_swr8d")]
-position = Vector2(2, 2)
-gravity_scale = 0.0
-
 [node name="HUD" parent="." instance=ExtResource("4_836q1")]
 
-[connection signal="hit" from="Player" to="." method="_on_player_hit"]
+[node name="Enemy" parent="." instance=ExtResource("2_swr8d")]
+position = Vector2(1045, 330)
+
+[node name="Player" parent="." instance=ExtResource("1_f7qmh")]
+position = Vector2(570, 273)
+
+[connection signal="reset" from="HUD" to="." method="_on_hud_reset"]
+[connection signal="timesup" from="HUD" to="." method="_on_hud_timesup"]
+[connection signal="area_entered" from="Player" to="." method="_on_player_area_entered"]

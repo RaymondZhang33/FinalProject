@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c32j548m21j4a"]
+[gd_scene load_steps=6 format=3 uid="uid://cxoeoieb1o7nk"]
 
 [ext_resource type="Texture2D" uid="uid://paalnl8jov4h" path="res://Sprites/pixilart-drawing (1).png" id="1_3ok0d"]
 [ext_resource type="Script" path="res://player.gd" id="1_xnmx8"]
@@ -23,21 +23,22 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_jtbfb"]
-radius = 105.005
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g3ixf"]
+radius = 51.0
+height = 174.0
 
 [node name="Player" type="Area2D"]
 position = Vector2(333, 189)
 script = ExtResource("1_xnmx8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(226.5, 54)
+position = Vector2(4.00002, -7)
 scale = Vector2(2.97, 2.08)
 sprite_frames = SubResource("SpriteFrames_kr03n")
 animation = &"down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(251, 61)
-shape = SubResource("CircleShape2D_jtbfb")
+position = Vector2(7, 1)
+shape = SubResource("CapsuleShape2D_g3ixf")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

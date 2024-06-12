@@ -1,33 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://bkcfr854v1g0u"]
+[gd_scene load_steps=5 format=3 uid="uid://bpay4b7p2kycd"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_o4v7w"]
 [ext_resource type="Texture2D" uid="uid://sklajvhucbl" path="res://Sprites/pixilart-drawing (2).png" id="1_r7pme"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_6vb6y"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_2v5sq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_r7pme")
 }],
 "loop": true,
-"name": &"atac",
+"name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3d3e"]
-size = Vector2(90, 79)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j3fjb"]
+size = Vector2(41, 35)
 
-[node name="Enemy" type="RigidBody2D"]
+[node name="Enemy" type="Area2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_o4v7w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1047, 304)
-scale = Vector2(1.98, 2.055)
-sprite_frames = SubResource("SpriteFrames_6vb6y")
-animation = &"atac"
-metadata/_edit_group_ = true
+sprite_frames = SubResource("SpriteFrames_2v5sq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1051, 283)
-shape = SubResource("RectangleShape2D_r3d3e")
-metadata/_edit_group_ = true
+position = Vector2(2.5, -10.5)
+shape = SubResource("RectangleShape2D_j3fjb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
