@@ -41,4 +41,6 @@ animation = &"down"
 position = Vector2(7, 1)
 shape = SubResource("CapsuleShape2D_g3ixf")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
